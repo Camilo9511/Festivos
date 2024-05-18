@@ -5,7 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import apidiasfestivo.apidiasfestivos.core.dominio.festivo;
 
+
+
 @Repository
 public interface festivoRepositorio extends JpaRepository<festivo,Integer> {
-    
+    festivo findByDiaAndMes(int dia, int mes);
 }

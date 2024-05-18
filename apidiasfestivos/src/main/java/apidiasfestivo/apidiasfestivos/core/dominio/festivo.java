@@ -2,8 +2,6 @@ package apidiasfestivo.apidiasfestivos.core.dominio;
 
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.DialectOverride.GeneratedColumns;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -12,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 @Entity
 
-@Table(name = "nombre")
+@Table(name = "festivo")
 public class festivo {
     
     @Id
@@ -34,13 +32,13 @@ public class festivo {
     private int Idtipo;
     
     @Column(name="dia_pascua")
-    private int dia_pascua;
+    private Integer dia_pascua;
 
     public festivo(){
 
     }
 
-    public festivo (int id,int dia,int mes,String nombre,int Idtipo, int dia_pascua){
+    public festivo (int id,int dia,int mes,String nombre,int Idtipo, Integer dia_pascua){
         this.id=id;
         this.dia= dia;
         this.mes=mes;
@@ -48,11 +46,19 @@ public class festivo {
         this.Idtipo=Idtipo;
         this.dia_pascua=dia_pascua;
     }
+    
+    public int getid() {
+        return id;
+    }
+    
+    public void setid(int id) {
+        this.id = id;
 
+    }   
     public int getDia() {
         return dia;
+    
     }
-
     public void setDia(int dia) {
         this.dia = dia;
     }
@@ -69,7 +75,7 @@ public class festivo {
         return nombre;
     }
 
-    public void setNombres(String nombres) {
+    public void setNombres(String nombre) {
         this.nombre = nombre;
     }
 
@@ -77,16 +83,17 @@ public class festivo {
         return Idtipo;
     }
 
-    public void setIdTipo(int tipo) {
+    public void setIdTipo(int Idtipo) {
         this.Idtipo = Idtipo;
     }
 
-    public int getDia_pascua() {
+    public Integer getDia_pascua() {
         return dia_pascua;
     }
 
-    public void setDia_pascua(int dia_pascua) {
+    public void setDia_pascua(Integer dia_pascua) {
         this.dia_pascua = dia_pascua;
     }
+    
     
 }

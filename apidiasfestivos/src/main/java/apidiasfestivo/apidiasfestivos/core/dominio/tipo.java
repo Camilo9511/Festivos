@@ -1,7 +1,7 @@
 package apidiasfestivo.apidiasfestivos.core.dominio;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.DialectOverride.GeneratedColumns;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
